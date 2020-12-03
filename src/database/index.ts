@@ -13,7 +13,7 @@ class Database {
   }
 
   async init () {
-    this.connection = new Sequelize(this.auth.development)
+    this.connection = new Sequelize(this.auth.development || process.env.DATABASE_URL)
 
     try {
       await this.connection.authenticate()
