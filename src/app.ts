@@ -5,7 +5,7 @@ import cors from 'cors'
 
 import linksRouter from './app/routes/links'
 
-import './database/index.'
+import './database/'
 
 dotenv.config()
 

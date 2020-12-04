@@ -2,7 +2,7 @@ import { DataTypes, Model, Optional } from 'sequelize'
 
 import { Link as TypeLink } from '../types/link'
 
-import database from '../../database/index.'
+import database from '../../database/'
 
 interface ILinkCreationAttributes extends Optional<TypeLink, 'id'>{}
 
