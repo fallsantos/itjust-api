@@ -4,6 +4,7 @@
   "description": "A simple micro-SaaS for url shortening (back-end)",
   "main": "index.js",
   "scripts": {
+    "build": "npx tsc",
     "start": "node dist",
     "dev": "nodemon --watch src/ --exec ts-node src/index.ts -e ts"
   },
