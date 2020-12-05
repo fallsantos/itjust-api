@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv'
-import express, { Express } from 'express'
+import express, { Express, Request, Response } from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 
@@ -28,6 +28,15 @@ class App {
 
   routes () {
     this.server.use(linksRouter)
+    this.server.get('/dev', (req: Request, res: Response) => {
+      return res.json({
+        name: 'itJust api',
+        author: {
+          name: 'Flávio Marques',
+          email: 'fallsantosdev@hotmail.com'
+        }
+      })
+    })
   }
 }
 
